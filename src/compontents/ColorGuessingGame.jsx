@@ -127,12 +127,14 @@ const ColorGuessingGame = () => {
         ))}
       </div>
       <p data-testid="gameStatus">{gameStatus}</p>
-      <p data-testid="score" className="score">Score: {score}</p>
-      <button data-testid="newGameButton" onClick={handleNewGameClick}>
-        New Game
-      </button>
+      <div className="score-button-container">
+        <p data-testid="score" className="score">Score: {score}</p>
+        <button data-testid="newGameButton" onClick={handleNewGameClick}>
+          New Game
+        </button>
+      </div>
     </div>
-  );
+  );  
 };
 
 export default ColorGuessingGame;
