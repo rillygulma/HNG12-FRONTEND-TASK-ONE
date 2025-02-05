@@ -57,15 +57,36 @@ h2 {
 }
 
 @keyframes correctAnimation {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+    background-color: initial;
+  }
+  50% {
+    transform: scale(1.2);
+    background-color: #28a745; /* Green color */
+  }
+  100% {
+    transform: scale(1);
+    background-color: initial;
+  }
 }
 
 @keyframes wrongAnimation {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .options {
@@ -113,6 +134,25 @@ p {
   font-size: 18px;
   font-weight: bold;
 }
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.score {
+  border: 2px solid #4CAF50; /* Green border */
+  border-radius: 5px;        /* Rounded corners */
+  padding: 10px;             /* Space inside the border */
+  display: inline-block;     /* Adjusts the width to fit content */
+  font-weight: bold;         /* Makes the text bold */
+  background-color: #f9f9f9; /* Light grey background */
+  margin-bottom: 10px;       /* Space between score and button */
+}
+
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
